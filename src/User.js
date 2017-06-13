@@ -8,7 +8,7 @@ export default class User {
     }
     /**
      *
-     * @returns languageCode
+     * @return languageCode
      */
     get languageCode(){
         return this.user.languageCode
@@ -29,14 +29,14 @@ export default class User {
     }
     /**
      *
-     * @returns email
+     * @return email
      */
     get email(){
         return this.user.email
     }
 
     /**
-     * @returns name
+     * @return name
      */
     get name(){
         return this.user.name
@@ -44,7 +44,7 @@ export default class User {
 
     /**
      *
-     * @returns username
+     * @return username
      */
     get username(){
         return this.user.username

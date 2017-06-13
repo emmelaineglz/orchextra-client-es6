@@ -11,9 +11,9 @@ auth.authClient('qwerty', 'qwerty')
 
 auth.loginUser('nehomar.correa', 'gigigo10')
     .then(user => {
-        console.log('Nombre:', user.getName())
+        console.log('Nombre:', user.name)
         console.log('Email:', user.email)
-        console.log('Username:', user.getUsername())
+        console.log('Username:', user.username)
     })
     .catch(error => {
         console.log('ErrorStatusCode:', error.statusCode)
