@@ -1,6 +1,6 @@
 {
   "name": "orchextra-client",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Autenticación de Clientes y Usuarios de Orchextra-Client",
   "main": "Auth.js",
   "scripts": {
@@ -62,5 +62,13 @@
   },
   "keywords": [
     "cupones"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmelaineglz/orchextra-client-es6.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emmelaineglz/orchextra-client-es6/issues"
+  },
+  "homepage": "https://github.com/emmelaineglz/orchextra-client-es6#readme"
 }
