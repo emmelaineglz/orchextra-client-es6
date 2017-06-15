@@ -33,11 +33,13 @@ auth.authClient('cliente1', '12345')
 ## Para el login del Usuario, hacemos referencia el método de Autenticación del Usuario, y llamamos a los métodos que devuelven la información completa del Usuario.
 
 ```js
-auth.loginUser('user1', '12345')
+auth.loginUser('user1', '12345', 'Dashboard')
     .then(user => {
         console.log('Nombre:', user.getName())
         console.log('Email:', user.email)
         console.log('Username:', user.getUsername())
+        console.log('Token:', user.getToken())
+        console.log('ExpiresIn:', user.getExpiresIn())
     })
     .catch(error => {
         console.log('ErrorStatusCode:', error.statusCode)
