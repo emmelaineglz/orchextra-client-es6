@@ -57,4 +57,19 @@ export default class User {
   get projectIds () {
     return this.user.projectIds
   }
+  /**
+   *
+   * @return token
+   */
+  get token () {
+    return this.user.access.token
+  }
+  /**
+   *
+   * @return expiresIn
+   */
+  get expiresIn () {
+    return this.user.access.expiresIn
+  }
+
 }

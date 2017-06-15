@@ -5,7 +5,7 @@ export default class Auth {
   /**
    *
    * @param url
-  */
+   */
   constructor (url) {
     this.url = url
   }
@@ -14,7 +14,7 @@ export default class Auth {
    * @param clientId
    * @param clientSecret
    * @returns {*|Promise.<TResult>}
-  */
+   */
   authClient (clientId, clientSecret) {
     var options = {
       method: 'POST',
@@ -25,50 +25,53 @@ export default class Auth {
       },
       json: true
     }
-  /**
-   *
-   * @type {Auth}
-  */
+    /**
+     *
+     * @type {Auth}
+     */
     var self = this
     return rp(options)
-    .then(function (parsedBody) {
-      self.token = parsedBody.token
-      self.expiresIn = parsedBody.expiresIn
-      return self
-    })
+      .then(function (parsedBody) {
+        self.token = parsedBody.token
+        self.expiresIn = parsedBody.expiresIn
+        return self
+      })
   }
   /**
    *
    * @param username
    * @param password
+   * @param client
    * @returns {*|Promise.<TResult>}
-  */
-  loginUser (username, password) {
+   */
+  loginUser (username, password, client) {
     var options = {
       method: 'POST',
       uri: this.url + '/login',
       body: {
         username: username,
-        password: password
+        password: password,
+        client: client
       },
       json: true
     }
+
     return rp(options)
       .then(function (parsedBody) {
         return new User(parsedBody)
       })
   }
-    /**
-     *
-     * @returns token
-     */
+  /**
+   *
+   * @returns token
+   */
   getToken () {
     return this.token
   }
-    /**
-     *
-     * @returns expiresIn
-     */
+  /**
+   *
+   * @returns expiresIn
+   */
   getExpiresIn () {
     return this.expiresIn
   }

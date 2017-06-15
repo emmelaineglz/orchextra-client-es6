@@ -1,6 +1,6 @@
 {
   "name": "orchextra-client",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Autenticación de Clientes y Usuarios de Orchextra-Client",
   "main": "Auth.js",
   "scripts": {
